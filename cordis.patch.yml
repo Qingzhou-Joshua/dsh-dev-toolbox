@@ -1,0 +1,8 @@
+# dsh-dev-toolbox — 纯 client 插件，宿主半为空壳。
+# 挂载行由本 bundle 的 dsh.bundle.patch 声明：
+#   - insert:
+#       - id: dev-toolbox
+#         name: 'dsh-dev-toolbox'
+- insert:
+    - id: dev-toolbox
+      name: 'dsh-dev-toolbox'

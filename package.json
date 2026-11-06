@@ -1,0 +1,61 @@
+{
+  "name": "dsh-dev-toolbox",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH 开发工具箱侧边栏：JSON / 代码格式化 / URL 工具集，致敬 toolhelper.cn。",
+  "license": "MIT",
+  "author": "Qingzhou-Joshua",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qingzhou-Joshua/dsh-dev-toolbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Qingzhou-Joshua/dsh-dev-toolbox/issues"
+  },
+  "homepage": "https://github.com/Qingzhou-Joshua/dsh-dev-toolbox#readme",
+  "keywords": [
+    "dsh",
+    "deepseek",
+    "agent-harness",
+    "plugin",
+    "sidebar",
+    "toolbox",
+    "developer-tools",
+    "json-formatter",
+    "url-tools",
+    "encode-decode"
+  ],
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./dist/client.js",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "dist/client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "js-beautify": "^1.15.0"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}
